@@ -21,6 +21,7 @@ def contacts(request):
 Номер телефона: {review.phone}
 Текст: {review.message}
 """)
+        return redirect("index")
         
     context ={
         'umka':umka,

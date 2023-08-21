@@ -31,7 +31,7 @@
   <body>
     <header class="container-fluid">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">JPhotography</a>
+        <a class="navbar-brand" href="{% url 'index' %}"><img src="{{ umka.logo_site.url }}"width=250px alt="Image" /></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
           <span class="icon-bar i1"></span>
           <span class="icon-bar i2"></span>
@@ -44,13 +44,13 @@
               <a class="nav-link" href="index.html">HOME </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about-me.html">ABOUT ME</a>
+              <a class="nav-link" href="{% url 'about' %}">Обо мне</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="portfolio.html">PORTFOLIO <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="{% url 'portfolio' %}">Портфолио <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">CONTACT</a>
+              <a class="nav-link" href="{% url 'contact' %}">Контакты</a>
             </li>
           </ul>
           
@@ -75,20 +75,22 @@
         <div class="section-title">
           <h2>Project Video.!</h2>
           <p>More Details About The Project</p>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <div class="project-holder">
-              <iframe class="project-video" src="https://www.youtube.com/embed/6a-iCAy9VAs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="project-holder">
+                <video class="project-video" controls>
+                  <source src="{{ project_video.video_profile.url }}" type="">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
             </div>
           </div>
-        </div>
         <div class="project-details">
           <div class="row">
             <div class="col-md-7">
               <div class="details-left">
-                <h2>Happy Girl / Melbourne, Australia..!</h2>
-                <p>Phasellus dictum porta efficitur. Fusce mollis velit erat, quis posuere purus molestie eu. Nam in mauris finibus, condimentum elit at, vehicula augue. Proin ut eros non nunc mollis interdum. Nam rutrum metus eget nibh efficitur hendrerit. Duis ex metus, lobortis a enim id, faucibus condimentum enim. Duis elementum augue eu eros volutpat cursus. Etiam volutpat ante nec risus ullamcorper, at lobortis nisl laoreet. Morbi pharetra ultricies aliquam. Nam in tincidunt massa. Donec at aliquam urna, sed maximus tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                <h2>{{project_video.title_video}}</h2>
+                <p>{{project_video.descriptions_video}}</p>
               </div>
             </div>
             <div class="offset-md-1 col-md-4">
@@ -122,17 +124,13 @@
       <div class="container-fluid">
             <div class="footer-info">
               <div class="footer-title">
-                <h2>JPhotography</h2>
-                <p>&copy; Copyrights 2019. All Rights Reserved.</p>
+                <h2><img src="{{ umka.logo_site.url }}"width=250px alt="Image"></h2>
+                <p>&copy; Copyrights 2023. isko</p>
               </div>
               <div class="footer-social">
-                <a href=""><i class="fab fa-dribbble"></i></a>
-                <a href=""><i class="fab fa-behance"></i></a>
-                <a href=""><i class="fab fa-instagram"></i></a>
-                <a href=""><i class="fab fa-500px"></i></a>
-                <a href=""><i class="fab fa-flickr"></i></a>
+                <a href="https://www.instagram.com/umkaa_sh/"><i class="fab fa-instagram"></i></a>
                 <a href=""><i class="fab fa-facebook"></i></a>
-                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-whatsapp"></i></a>
               </div>
             </div>
       </div>

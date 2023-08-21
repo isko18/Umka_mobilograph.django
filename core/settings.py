@@ -39,7 +39,6 @@ CORS_ALLOWED_ORIGINS = [
 
 ALLOWED_HOSTS = ['*'] + CORS_ALLOWED_ORIGINS
 
-
 CSRF_TRUSTED_ORIGINS = ["https://6c6b-193-106-48-201.ngrok-free.app"]
 
 TELEGRAM_BOT_TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN')
@@ -140,7 +139,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-# STATICFILES_DIRS = [BASE_DIR / 'static']
+STATICFILES_DIRS = [BASE_DIR / 'static']
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

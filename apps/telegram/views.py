@@ -1,14 +1,11 @@
 from django.shortcuts import render
-
-# Create your views here.
-from django.shortcuts import render
-from django.conf import settings
 from telebot import TeleBot, types
 
 from .models import TelegramUser
 
 # Create your views here.
-bot = TeleBot(settings.TELEGRAM_BOT_TOKEN, threaded=False)
+TELEGRAM_BOT_TOKEN = '6062271967:AAFP4qTmWj4PRKpuIBfk0_2yU1qK1MdisyY'
+bot = TeleBot(TELEGRAM_BOT_TOKEN, threaded=True)
 admin_id = 5268023094
 
 @bot.message_handler(commands=['start'])

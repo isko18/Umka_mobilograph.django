@@ -34,9 +34,11 @@ def project_1(request, id):
 def project_video(request, id):
     portfolio = Portfolio.objects.all()
     project_video = Project_video.objects.get(id=id)
+    umka = Umka.objects.latest("id")
     context = {
         'portfolio' : portfolio,
-        'project_video' : project_video 
+        'project_video' : project_video,
+        'umka' : umka, 
 
     }
     return render(request,'project-video.html',context) 

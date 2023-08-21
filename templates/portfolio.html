@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>JPhotography Minimal Photographey/Photographer Portolio</title>
+    <title>UMKA</title>
     <meta name="description" content="JPhotography Minimal Photographey/Photographer Portolio">
     
     <!-- Playfair Display - Raleway Fonts -->
@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
     <!-- Custom Styles -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" type="image/png" href="{{ umka.logo_site.url }}">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -100,9 +101,9 @@
                 </a>
             </div>
             {%endfor%}
-     {%for project_video in project_video %} 
-             <div class="mix landscape product">
-            <a href="{% url 'project-video' project_video.id %}" class="thumb-a" style="height: 300px;">
+            {%for project_video in project_video %} 
+            <div class="mix landscape product">
+              <a href="{% url 'project-video' project_video.id %}" class="thumb-a" style="height: 300px;">
               <div class="item-hover">
                   <div class="hover-text"><h3>{{ project_video.title_video }}</h3></div>
                 </div>
@@ -112,7 +113,7 @@
               </a>
             </div>
             {%endfor%}
-    </section>
+          </section>
 
     <footer>
       <div class="container-fluid">
@@ -122,7 +123,7 @@
                 <p>&copy; Copyrights 2023. isko</p>
               </div>
               <div class="footer-social">
-                <a href="https://instagram.com/islaw.18?igshid=OGQ5ZDc2ODk2ZA=="><i class="fab fa-instagram"></i></a>
+                <a href="https://www.instagram.com/umkaa_sh/"><i class="fab fa-instagram"></i></a>
                 <a href=""><i class="fab fa-facebook"></i></a>
                 <a href=""><i class="fab fa-whatsapp"></i></a>
               </div>
